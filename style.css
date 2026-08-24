@@ -14,7 +14,7 @@ nav {
     display: flex;
     width: 100vw;
     background-color: #e0e0e0;
-    height: 60px; 
+    height: 50px; 
     justify-content: space-between;
     align-items: center;
 }
@@ -35,7 +35,7 @@ nav ul li {
     display: inline-block;
     position: relative;
     margin-right: 60px;
-    font-size: large;
+    font-size: 16px;
     color: #FB3640;
     transition: transform 0.2s ease;
 }
@@ -67,6 +67,59 @@ nav ul li:hover {
     color: #1D3461;
     transform: translateX(-10px);
 }
+
+/*contact section stuck to the vp*/
+.contacts {
+  position: fixed;
+  display: inline-block;
+  top: 50vh;
+  right: 25px;
+}
+
+.contacts ul {
+  list-style-type: none;
+}
+
+.contacts ul li {
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 2em;
+}
+
+.contacts ul li span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  color: rgba(190, 190, 190, 0.533);
+}
+
+.contacts ul li::after {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+  background: rgba(190, 190, 190, 0);
+
+  right: -20px;
+  bottom: 25%;
+
+  transform: rotate(0deg);
+
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover the stationary <li> */
+.contacts ul li:hover span {
+  transform: translateX(-10px);
+  color: rgb(190, 190, 190);
+}
+
+.contacts ul li:hover::after {
+  transform: rotate(45deg);
+  background: rgb(190, 190, 190);
+}
 /* this is for the big WELCOME to my PORTFOLIO text */
 .opening-text {        
     display: flex;
@@ -90,32 +143,24 @@ nav ul li:hover {
 }
 .hero h1 {
     color: #FB3640;
-    font-size: 70px;
+    font-size: 3em;
     font-family: Helvetica;
     text-align: center;
 }
 .hero h2 {
     color: #e0e0e0;
     font-family: Helvetica;
+    font-size: 2em;
 }
 .hero p {
-    margin: 10px;
-    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    text-align: justify center;
     max-width: 600px;
     color: #e0e0e0;
+    font-size: 1em;
 }
 
-/* this is the footer with my contacts at the very bottom */
-.footer {
-    background-color: #e0e0e0;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer p {
-    text-align: center;
-}
 
 
  
